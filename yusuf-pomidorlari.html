@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YUSUF POMIDORLARI — Eng mazali va seryuz pomidorlar</title>
+<style>
+:root{--red:#e5322d;--org:#f59e0b;--grn:#2e7d32;--yel:#ffe000;--ink:#1f2937;--mut:#6b7280;--bg:#f7f8fc;--line:#e5e7eb;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65;font-size:16px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:auto;padding:0 24px}
+h1,h2,h3{font-weight:600;line-height:1.2;letter-spacing:-.01em}
+.btn{display:inline-block;background:var(--red);color:#fff;font-family:inherit;font-weight:600;font-size:.95rem;padding:14px 30px;border-radius:10px;border:0;cursor:pointer;box-shadow:0 8px 20px rgba(229,50,45,.25);transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:#fff;color:var(--ink);box-shadow:none;border:1px solid var(--line)}
+.btn.big{font-size:1.15rem;padding:18px 44px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top{background:#fff;padding:18px 16px;border-bottom:1px solid var(--line)}
+.toprow{max-width:1000px;margin:auto;display:flex;align-items:center}
+.toprow i{display:block;width:18px;height:18px;border-radius:50%;flex:none;background:var(--red)}
+.toprow i.o{background:var(--grn)}
+.toprow b{display:block;height:3px;flex:1;background:var(--ink);min-width:16px}
+.toprow a{display:block;margin:0 18px;flex:none}
+.toprow svg{height:150px;width:auto;max-width:100%;display:block;background:var(--yel);border:4px solid #000}
+.sep{display:flex;align-items:center;max-width:560px;margin:0 auto;padding:30px 0 0}
+.sep i{width:12px;height:12px;border-radius:50%;background:var(--red);flex:none}
+.sep i+b+i{background:var(--grn)}
+.sep b{flex:1;height:2px;background:var(--line)}
+.hbar{display:flex;align-items:center;justify-content:center;max-width:1140px;margin:auto;padding:6px 24px;position:relative}
+nav{display:flex;gap:6px}
+nav a{font-weight:500;font-size:.95rem;padding:8px 14px;border-radius:8px;color:#374151;transition:.2s}
+nav a:hover{color:var(--red);background:#fff4f3}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:1.3rem;cursor:pointer}
+.hero,.game{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 18% 30%,rgba(168,85,247,.5),transparent 45%),radial-gradient(circle at 82% 72%,rgba(236,72,153,.38),transparent 42%),radial-gradient(circle at 62% 8%,rgba(59,130,246,.38),transparent 40%),#070a1f}
+.hero{padding:90px 0}
+.hero:before,.game:before{content:"";position:absolute;inset:0;background-size:320px 220px;background-image:radial-gradient(1.5px 1.5px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 90px 120px,#fff,transparent),radial-gradient(2px 2px at 160px 60px,#ffe9a8,transparent),radial-gradient(1px 1px at 230px 170px,#fff,transparent),radial-gradient(1.5px 1.5px at 300px 90px,#cfe3ff,transparent),radial-gradient(1px 1px at 50px 190px,#fff,transparent)}
+.hero:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:5%;bottom:-50px;background:radial-gradient(circle at 35% 30%,#ff8a80,#e5322d 60%,#7f1d1d);box-shadow:0 0 70px rgba(229,50,45,.5)}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.tag{display:inline-block;font-size:.85rem;font-weight:600;color:var(--red);background:#fff;border:1px solid #fbd5d3;border-radius:30px;padding:5px 14px;margin-bottom:18px}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.8rem);font-weight:700;margin-bottom:14px}
+.hero h1 span{color:#ff6b63}
+.hero h2{font-size:clamp(1.1rem,2.2vw,1.4rem);font-weight:500;color:var(--org);margin-bottom:14px}
+.hero p{color:#cbd5e1;font-size:1.1rem;max-width:480px}
+.img{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(17,24,39,.15)}
+.img svg{position:absolute;inset:0;width:100%;height:100%}
+.hero .img{aspect-ratio:4/3.4}
+section{padding:90px 0}
+.sec-title{text-align:center;margin-bottom:56px}
+.sec-title small{display:block;color:var(--red);font-weight:600;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.sec-title h2{font-size:clamp(1.7rem,3.6vw,2.4rem)}
+.sec-title h2 span{color:var(--red)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px}
+.split:last-child{margin-bottom:0}
+.split .img{aspect-ratio:4/3.2}
+.split.mirror .img{order:2}
+.txt h3{font-size:clamp(1.4rem,2.8vw,1.9rem);margin-bottom:16px}
+.txt h3 span{color:var(--red)}
+.txt p{color:var(--mut);margin-bottom:14px}
+.txt ul{list-style:none;margin:18px 0}
+.txt li{padding-left:26px;position:relative;margin:9px 0;font-weight:500}
+.txt li:before{content:"";position:absolute;left:0;top:.6em;width:10px;height:10px;border-radius:50%;background:var(--grn)}
+.stats{display:flex;gap:34px;margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+.stats b{display:block;font-size:1.7rem;color:var(--red);font-weight:700}
+.stats span{font-size:.9rem;color:var(--mut)}
+.gray{background:var(--bg)}
+.lead{text-align:center;color:var(--mut);max-width:640px;margin:-30px auto 40px}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.field{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;text-align:center;box-shadow:0 6px 20px rgba(17,24,39,.05)}
+.field b{display:block;font-size:2rem;color:var(--red)}
+.field span{color:var(--mut);font-size:.95rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 26px;box-shadow:0 6px 20px rgba(17,24,39,.05);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(17,24,39,.1)}
+.card i{display:block;width:44px;height:6px;border-radius:4px;background:linear-gradient(90deg,var(--red),var(--grn));margin-bottom:20px}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p{color:var(--mut);font-size:.96rem}
+.dark{background:#111827;color:#fff}
+.dark .sec-title h2{color:#fff}
+.dark .sec-title small{color:var(--org)}
+form{max-width:620px;margin:auto;display:grid;gap:14px}
+input,textarea{width:100%;padding:15px 18px;border-radius:10px;border:1px solid #374151;background:#1f2937;color:#fff;font:inherit;font-size:1rem}
+.light input,.light textarea{background:#fff;color:var(--ink);border:1px solid #d1d5db}
+input::placeholder,textarea::placeholder{color:#9ca3af}
+input:focus,textarea:focus{outline:2px solid var(--org);border-color:transparent}
+textarea{min-height:130px;resize:vertical}
+.ok{display:none;text-align:center;font-weight:500;background:#ecfdf5;color:#047857;border-radius:10px;padding:13px}
+.cbox{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.cinfo h3{font-size:1.6rem;margin-bottom:14px}
+.cinfo p{color:var(--mut);margin-bottom:22px}
+.crow{display:flex;gap:14px;align-items:center;margin-bottom:14px;font-weight:500}
+.crow em{font-style:normal;font-size:.8rem;font-weight:600;color:var(--red);width:64px}
+.cbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.game{padding:90px 0 80px}.game .wrap{position:relative;z-index:1;text-align:center}
+.gm{position:fixed;inset:0;z-index:300;display:none;background:#070a1f;touch-action:none}
+.gm.on{display:block}
+#cv{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.gbar{position:absolute;left:0;right:0;top:env(safe-area-inset-top,0px);display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;color:#fff;font-weight:600;font-size:1.15rem;pointer-events:none}
+.gbar button{pointer-events:auto;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:8px 16px;font:inherit;font-size:.95rem;cursor:pointer}
+.gover{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:24px;background:rgba(7,10,31,.72)}
+.gover.off{display:none}
+.gover h3{font-size:2rem;margin-bottom:10px}
+.gover p{color:#cbd5e1;max-width:420px;margin:0 auto 24px}
+footer{background:#0b1220;color:#9ca3af;text-align:center;padding:28px 20px;font-size:.92rem}
+@media(max-width:860px){
+.toprow svg{height:110px}.toprow a{margin:0 10px}.toprow i{width:14px;height:14px}
+.hbar{justify-content:flex-end;padding:6px 16px}
+.btn{width:100%;text-align:center}.cbtns .btn{flex:1 1 100%}
+.wrap{padding:0 18px}
+.hero .wrap,.split,.cbox{grid-template-columns:1fr;gap:34px}
+.split.mirror .img{order:0}.split{margin-bottom:56px}
+.burger{display:block}
+nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:10px 24px 16px;border-bottom:1px solid var(--line)}
+nav.open{display:flex}
+.hero{padding:56px 0}section{padding:60px 0}
+.stats{gap:22px;flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="toprow"><i></i><b></b><a href="#bosh" aria-label="YUSUF"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="78" r="38" fill="#e5322d"/><path d="M60 42l-8 10-12-4 8 10-8 8 12-2 8 10 8-10 12 2-8-8 8-10-12 4z" fill="#2e7d32"/><text x="112" y="68" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="34" fill="#000">YUSUF</text><text x="112" y="104" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="22" fill="#e5322d">POMIDORLARI</text></svg></a><b></b><i class="o"></i></div></div>
+<header>
+ <div class="hbar">
+  <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menyu">&#9776;</button>
+  <nav id="nav">
+   <a href="#bosh">Bosh sahifa</a>
+   <a href="#haqida">Mahsulot haqida</a>
+   <a href="#ostiriladi">Qayerda o‘stiriladi</a>
+   <a href="#sotib">Qayerdan sotib olish</a>
+   <a href="#aloqa">Aloqa</a>
+  </nav>
+ </div>
+</header>
+
+<div class="hero" id="bosh">
+ <div class="wrap">
+  <div>
+   <span class="tag">🍅 Yangi hosil</span>
+   <h1>YUSUF <span>POMIDORLARI</span> 🍅</h1>
+   <h2>Galaktikada eng mazali pomidorlar</h2>
+   <p>Seryuz, shirali va pishgan pomidorlar hamyonbop narxlarda</p>
+  </div>
+  <div class="img"><svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice"><rect width="400" height="340" fill="#fff3b0"/><circle cx="320" cy="60" r="70" fill="#ffd54a"/><rect y="250" width="400" height="90" fill="#7cb342"/><circle cx="130" cy="210" r="95" fill="#e53935"/><circle cx="100" cy="175" r="22" fill="#ff8a80" opacity=".6"/><path d="M130 115l-14 18-22-8 15 18-15 14 22-4 14 18 14-18 22 4-15-14 15-18-22 8z" fill="#2e7d32"/><circle cx="285" cy="240" r="62" fill="#d32f2f"/><path d="M285 188l-9 12-15-5 10 12-10 9 15-3 9 12 9-12 15 3-10-9 10-12-15 5z" fill="#388e3c"/></svg></div>
+ </div>
+</div>
+
+<section id="haqida">
+ <div class="wrap">
+  <div class="sec-title"><small>Sifat kafolati</small><h2>Mahsulot <span>haqida</span></h2></div>
+  <div class="split">
+   <div class="img"><svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice"><rect width="400" height="320" fill="#fff8d6"/><circle cx="200" cy="170" r="125" fill="#e53935"/><circle cx="200" cy="170" r="104" fill="#ef5350"/><g fill="#ffe082"><ellipse cx="150" cy="150" rx="12" ry="20"/><ellipse cx="250" cy="150" rx="12" ry="20"/><ellipse cx="200" cy="215" rx="12" ry="20"/><ellipse cx="200" cy="130" rx="10" ry="16"/></g></svg></div>
+   <div class="txt">
+    <h3>Eng <span>mazali</span> va seryuz pomidorlar</h3>
+    <p>YUSUF pomidorlari quyoshda to‘liq pishgan, sershira va yoqimli ta’mga ega. Biz faqat yetilgan mevalarni qo‘lda tanlab yig‘amiz.</p>
+    <ul>
+     <li>Shirin-nordon, mazali ta’m</li>
+     <li>Seryuz va sershira go‘sht</li>
+     <li>Sifat nazoratidan o‘tgan</li>
+     <li>Tez va toza yetkazib berish</li>
+    </ul>
+    <div class="stats"><div><b>100%</b><span>Tabiiy</span></div><div><b>Har kuni</b><span>Yangi hosil</span></div><div><b>Qo‘lda</b><span>Terilgan</span></div></div>
+   </div>
+  </div>
+  <div class="split mirror">
+   <div class="img"><svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice"><rect width="400" height="320" fill="#ffe082"/><circle cx="200" cy="130" r="46" fill="#fff59d"/><rect y="220" width="400" height="100" fill="#7cb342"/><g stroke="#33691e" stroke-width="5"><path d="M60 220V90M140 220V80M260 220V80M340 220V90"/></g><g fill="#e53935"><circle cx="60" cy="130" r="22"/><circle cx="140" cy="150" r="24"/><circle cx="260" cy="140" r="24"/><circle cx="340" cy="160" r="22"/><circle cx="60" cy="185" r="20"/><circle cx="340" cy="200" r="20"/></g></svg></div>
+   <div class="txt">
+    <h3>Dalada pishgan, <span>stolingizda</span> mazali</h3>
+    <p>Pomidorlarimiz tabiiy sharoitda, toza suv va ko‘p quyoshda o‘sadi. O‘z vaqtida terib olinadi va yangiligicha sizga yetkaziladi.</p>
+    <p>Salat, sho‘rva, sous yoki qishlik tayyorlov — oilangiz uchun eng yaxshi tanlov. Bir marta tatib ko‘ring — yana so‘rab qolasiz.</p>
+   </div>
+  </div>
+ </div>
+</section>
+<div class="sep"><i></i><b></b><i></i></div>
+<section id="ostiriladi" class="gray">
+ <div class="wrap">
+  <div class="sec-title"><small>Bizning dalalar</small><h2>Qayerda <span>o‘stiriladi</span></h2></div>
+  <p class="lead">Pomidorlarimiz O‘zbekistonning quyoshli dalalarida va issiqxonalarida o‘stiriladi.</p>
+  <div class="fields">
+   <div class="field"><b>☀️</b><span>Ko‘p quyosh</span></div>
+   <div class="field"><b>💧</b><span>Toza sug‘orish suvi</span></div>
+   <div class="field"><b>🌱</b><span>Tabiiy o‘g‘itlar</span></div>
+   <div class="field"><b>🚜</b><span>Dalamizdan to‘g‘ridan-to‘g‘ri</span></div>
+  </div>
+ </div>
+</section>
+<div class="sep"><i></i><b></b><i></i></div>
+<section id="sotib">
+ <div class="wrap">
+  <div class="sec-title"><small>Xarid qilish</small><h2>Qayerdan <span>sotib olish</span></h2></div>
+  <div class="cards">
+   <div class="card"><i></i><h3>Bozorlarda</h3><p>Bozorlardagi do‘konlarimizdan yangi pomidorlarni sotib oling.</p></div>
+   <div class="card"><i></i><h3>Uyga yetkazish</h3><p>Buyurtma bering — pomidorlar eshigingizgacha yetib boradi.</p></div>
+   <div class="card"><i></i><h3>Telefon orqali</h3><p>Pastdagi telefon raqamiga qo‘ng‘iroq qiling.</p></div>
+   <div class="card"><i></i><h3>Ulgurji savdo</h3><p>Do‘konlar va restoranlar uchun maxsus narxlar.</p></div>
+  </div>
+ </div>
+</section>
+<div class="sep"><i></i><b></b><i></i></div>
+<section class="dark" id="fikr">
+ <div class="wrap">
+  <div class="sec-title"><small>Sizning fikringiz</small><h2>Fikr <span style="color:var(--org)">bildirish</span></h2></div>
+  <form onsubmit="return done(this)">
+   <input type="text" placeholder="Ismingiz" required>
+   <input type="tel" placeholder="Telefon raqamingiz" required>
+   <textarea placeholder="Pomidorlar haqida fikr, savol yoki taklifingiz" required></textarea>
+   <button class="btn" type="submit">Yuborish</button>
+   <div class="ok">Rahmat! Xabaringiz yuborildi.</div>
+  </form>
+ </div>
+</section>
+<div class="sep"><i></i><b></b><i></i></div>
+<section id="aloqa" class="light">
+ <div class="wrap">
+  <div class="sec-title"><small>Biz bilan bog‘laning</small><h2><span>Aloqa</span></h2></div>
+  <div class="cbox">
+   <div class="cinfo">
+    <h3>Buyurtma va savollar uchun</h3>
+    <p>Galaktikada eng mazali pomidorlar sizni kutmoqda.</p>
+    <div class="crow"><em>Telefon</em><a href="tel:+998900000000">+998 90 000 00 00</a></div>
+    <div class="crow"><em>Email</em><a href="mailto:info@example.com">info@example.com</a></div>
+    <div class="cbtns">
+     <a class="btn" href="tel:+998900000000">Qo‘ng‘iroq qilish</a>
+     <a class="btn ghost" href="mailto:info@example.com">Email yozish</a>
+    </div>
+   </div>
+   <form onsubmit="return done(this)" style="max-width:none">
+    <input type="text" placeholder="Ismingiz" required>
+    <input type="text" placeholder="Email yoki telefon" required>
+    <textarea placeholder="Xabaringiz" required></textarea>
+    <button class="btn" type="submit">Yuborish</button>
+    <div class="ok">Rahmat! Tez orada bog‘lanamiz.</div>
+   </form>
+  </div>
+ </div>
+</section>
+
+<section class="game" id="oyin">
+ <div class="wrap">
+  <div class="sec-title"><small>O‘yin</small><h2 style="color:#fff">Pomidorni <span>kes!</span></h2></div>
+  <p style="color:#cbd5e1;max-width:560px;margin:-30px auto 32px">Galaktikada pomidorlar uchib yuribdi. Barmog‘ingiz yoki sichqoncha bilan ularni ikkiga kesing va eng ko‘p ochko to‘plang.</p>
+  <button class="btn big" type="button" onclick="openGame()">O‘yinni boshlash</button>
+  <p style="color:#94a3b8;font-size:.85rem;margin-top:34px">YUSUF POMIDORLARI &copy; 2026</p>
+ </div>
+</section>
+
+<div class="gm" id="gm">
+ <canvas id="cv"></canvas>
+ <div class="gbar"><span>Ochko: <b id="sc">0</b></span><span>Jon: <b id="lv">3</b></span><button type="button" onclick="closeGame()">Yopish</button></div>
+ <div class="gover" id="gover"><div><h3 id="gt"></h3><p id="gp"></p><button class="btn" type="button" id="gb" onclick="startGame()">Boshlash</button></div></div>
+</div>
+
+<script>
+function done(f){f.querySelector('.ok').style.display='block';f.querySelectorAll('input,textarea').forEach(function(e){e.value=''});return false}
+var cv=document.getElementById('cv'),cx=cv.getContext('2d'),W=0,H=0,items=[],halves=[],drops=[],trail=[],stars=[],score=0,lives=3,run=false,raf=0,last=0,spawnT=0,down=false,G=1100;
+function rnd(a,b){return a+Math.random()*(b-a)}
+function size(){var d=Math.min(window.devicePixelRatio||1,2);W=window.innerWidth;H=window.innerHeight;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0);stars=[];for(var i=0;i<90;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:rnd(.5,1.8)})}
+function radius(){return Math.max(34,Math.min(W,H)*.075)}
+function spawn(){var r=radius(),x=rnd(r+20,W-r-20),h=H*rnd(.55,.85),vy=-Math.sqrt(2*G*h),T=2*Math.abs(vy)/G;items.push({x:x,y:H+r,vx:(W/2-x)/T*rnd(.3,.9),vy:vy,r:r,rot:rnd(0,6),vr:rnd(-3,3)})}
+function hud(){document.getElementById('sc').textContent=score;document.getElementById('lv').textContent=lives}
+function showOver(t,p,b){document.getElementById('gt').textContent=t;document.getElementById('gp').textContent=p;document.getElementById('gb').textContent=b;document.getElementById('gover').classList.remove('off')}
+function openGame(){document.getElementById('gm').classList.add('on');document.body.style.overflow='hidden';size();items=[];halves=[];drops=[];score=0;lives=3;run=false;hud();showOver('Pomidorni kes!','Barmog‘ingiz yoki sichqoncha bilan pomidorlar ustidan suring. 3 ta pomidor tushib ketsa — o‘yin tugaydi.','Boshlash');last=performance.now();cancelAnimationFrame(raf);raf=requestAnimationFrame(loop)}
+function closeGame(){run=false;cancelAnimationFrame(raf);document.getElementById('gm').classList.remove('on');document.body.style.overflow=''}
+function startGame(){items=[];halves=[];drops=[];score=0;lives=3;spawnT=.3;run=true;hud();document.getElementById('gover').classList.add('off')}
+function endGame(){run=false;showOver('O‘yin tugadi','Sizning natijangiz: '+score+' ta pomidor kesildi.','Qayta o‘ynash')}
+function leaf(r){cx.fillStyle='#2e7d32';cx.beginPath();for(var i=0;i<10;i++){var a=i*Math.PI/5,d=i%2?r*.12:r*.34;cx.lineTo(Math.cos(a)*d,-r*.86+Math.sin(a)*d*.6)}cx.closePath();cx.fill()}
+function tm(r){var g=cx.createRadialGradient(-r*.35,-r*.35,r*.1,0,0,r);g.addColorStop(0,'#ff6f61');g.addColorStop(1,'#b71c1c');cx.beginPath();cx.arc(0,0,r,0,7);cx.fillStyle=g;cx.fill();leaf(r)}
+function half(r){cx.beginPath();cx.arc(0,0,r,0,Math.PI);cx.closePath();cx.fillStyle='#c62828';cx.fill();cx.beginPath();cx.arc(0,0,r*.88,0,Math.PI);cx.closePath();cx.fillStyle='#ef5350';cx.fill();cx.fillStyle='#ffe082';for(var i=0;i<5;i++){var a=Math.PI*(i+.7)/5.6,d=r*(i%2?.45:.62);cx.beginPath();cx.ellipse(Math.cos(a)*d,Math.sin(a)*d,r*.05,r*.08,a,0,7);cx.fill()}}
+function slice(it,ang){score++;hud();var nx=-Math.sin(ang),ny=Math.cos(ang);for(var s=0;s<2;s++){var k=s?-1:1;halves.push({x:it.x,y:it.y,vx:it.vx+nx*k*140,vy:it.vy+ny*k*140-60,r:it.r,rot:ang+(s?Math.PI:0),vr:k*rnd(1,3)})}for(var i=0;i<14;i++){var a=rnd(0,6.3),v=rnd(80,320);drops.push({x:it.x,y:it.y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-80,l:1})}}
+function segHit(a,b,c,r){var dx=b.x-a.x,dy=b.y-a.y,l=dx*dx+dy*dy,t=l?Math.max(0,Math.min(1,((c.x-a.x)*dx+(c.y-a.y)*dy)/l)):0,px=a.x+t*dx-c.x,py=a.y+t*dy-c.y;return px*px+py*py<=r*r}
+function pt(e){var b=cv.getBoundingClientRect();return{x:e.clientX-b.left,y:e.clientY-b.top,t:performance.now()}}
+cv.addEventListener('pointerdown',function(e){down=true;trail=[pt(e)];try{cv.setPointerCapture(e.pointerId)}catch(x){}});
+cv.addEventListener('pointermove',function(e){if(!down)return;var p=pt(e),q=trail[trail.length-1];trail.push(p);if(!run||!q)return;var ang=Math.atan2(p.y-q.y,p.x-q.x);for(var i=items.length-1;i>=0;i--){if(segHit(q,p,items[i],items[i].r)){slice(items[i],ang);items.splice(i,1)}}});
+function up(){down=false}
+cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
+window.addEventListener('resize',function(){if(document.getElementById('gm').classList.contains('on'))size()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeGame()});
+function loop(now){var dt=Math.min((now-last)/1000,.033);last=now;
+ if(run){spawnT-=dt;if(spawnT<=0){var n=1+Math.floor(Math.random()*(1+Math.min(2,score/12)));for(var i=0;i<n;i++)spawn();spawnT=Math.max(.6,1.5-score*.015)}
+  for(var i=items.length-1;i>=0;i--){var it=items[i];it.vy+=G*dt;it.x+=it.vx*dt;it.y+=it.vy*dt;it.rot+=it.vr*dt;if(it.y>H+it.r+10&&it.vy>0){items.splice(i,1);lives--;hud();if(lives<=0){endGame();break}}}}
+ for(var i=halves.length-1;i>=0;i--){var h=halves[i];h.vy+=G*dt;h.x+=h.vx*dt;h.y+=h.vy*dt;h.rot+=h.vr*dt;if(h.y>H+h.r*2)halves.splice(i,1)}
+ for(var i=drops.length-1;i>=0;i--){var d=drops[i];d.vy+=G*.8*dt;d.x+=d.vx*dt;d.y+=d.vy*dt;d.l-=dt*1.6;if(d.l<=0)drops.splice(i,1)}
+ cx.clearRect(0,0,W,H);var g=cx.createLinearGradient(0,0,W,H);g.addColorStop(0,'#0b0f2e');g.addColorStop(.55,'#2a0f4a');g.addColorStop(1,'#4a0f3a');cx.fillStyle=g;cx.fillRect(0,0,W,H);
+ cx.fillStyle='#fff';for(var i=0;i<stars.length;i++){var s=stars[i];cx.globalAlpha=.4+.6*Math.abs(Math.sin(now/900+i));cx.fillRect(s.x,s.y,s.r,s.r)}cx.globalAlpha=1;
+ for(var i=0;i<halves.length;i++){var h=halves[i];cx.save();cx.translate(h.x,h.y);cx.rotate(h.rot);half(h.r);cx.restore()}
+ for(var i=0;i<items.length;i++){var it=items[i];cx.save();cx.translate(it.x,it.y);cx.rotate(it.rot);tm(it.r);cx.restore()}
+ for(var i=0;i<drops.length;i++){var d=drops[i];cx.globalAlpha=Math.max(0,d.l);cx.fillStyle='#ef3b36';cx.beginPath();cx.arc(d.x,d.y,4,0,7);cx.fill()}cx.globalAlpha=1;
+ var nt=performance.now();trail=trail.filter(function(p){return nt-p.t<250});
+ if(trail.length>1){cx.lineCap='round';cx.lineJoin='round';for(var i=1;i<trail.length;i++){var a=1-(nt-trail[i].t)/250;cx.strokeStyle='rgba(255,255,255,'+Math.max(0,a)+')';cx.lineWidth=2+7*a;cx.shadowColor='#fff';cx.shadowBlur=12;cx.beginPath();cx.moveTo(trail[i-1].x,trail[i-1].y);cx.lineTo(trail[i].x,trail[i].y);cx.stroke()}cx.shadowBlur=0}
+ raf=requestAnimationFrame(loop)}
+document.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open')})});
+</script>
+<footer>YUSUF POMIDORLARI &copy; 2026</footer>
+</body>
+</html>
